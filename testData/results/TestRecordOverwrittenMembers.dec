@@ -1,0 +1,29 @@
+package records;
+
+public record TestRecordOverwrittenMembers(int x, int y) {
+   public TestRecordOverwrittenMembers(int var1) {
+      this(var1, 42);// 5
+   }// 6
+
+   public int x() {
+      return 100;// 9
+   }
+}
+
+class 'records/TestRecordOverwrittenMembers' {
+   method '<init> (I)V' {
+      2      4
+      4      4
+      7      5
+   }
+
+   method 'x ()I' {
+      0      8
+      2      8
+   }
+}
+
+Lines mapping:
+5 <-> 5
+6 <-> 6
+9 <-> 9

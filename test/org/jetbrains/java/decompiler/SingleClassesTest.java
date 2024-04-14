@@ -180,6 +180,14 @@ public class SingleClassesTest {
   @Test public void testRecordVararg() { doTest("records/TestRecordVararg"); }
   @Test public void testRecordGenericVararg() { doTest("records/TestRecordGenericVararg"); }
   @Test public void testRecordAnno() { doTest("records/TestRecordAnno"); }
+  @Test public void testRecordHideRedundant() {
+    DecompilerContext.setProperty(IFernflowerPreferences.DECOMPILE_RECORD, "1");
+    doTest("records/TestRecordHideRedundant");
+  }
+  @Test public void testRecordOverwrittenMembers() {
+    DecompilerContext.setProperty(IFernflowerPreferences.DECOMPILE_RECORD, "1");
+    doTest("records/TestRecordOverwrittenMembers");
+  }
   @Test public void testRootWithClassInner() { doTest("sealed/RootWithClassInner"); }
   @Test public void testRootWithInterfaceInner() { doTest("sealed/RootWithInterfaceInner"); }
   @Test public void testRootWithClassOuter() { doTest("sealed/RootWithClassOuter",
