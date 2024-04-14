@@ -58,6 +58,10 @@ public class ClassWriter {
       EnumProcessor.clearEnum(wrapper);
     }
 
+    if (cl.getRecordComponents() != null && DecompilerContext.getOption(IFernflowerPreferences.DECOMPILE_RECORD)) {
+      RecordProcessor.clearRecord(wrapper);
+    }
+
     if (DecompilerContext.getOption(IFernflowerPreferences.DECOMPILE_ASSERTIONS)) {
       AssertProcessor.buildAssertions(node);
     }

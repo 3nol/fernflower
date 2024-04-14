@@ -19,6 +19,7 @@ public interface IFernflowerPreferences {
   String NO_EXCEPTIONS_RETURN = "ner";
   String ENSURE_SYNCHRONIZED_MONITOR = "esm";
   String DECOMPILE_ENUM = "den";
+  String DECOMPILE_RECORD = "der";
   String REMOVE_GET_CLASS_NEW = "rgn";
   String LITERALS_AS_IS = "lit";
   String BOOLEAN_TRUE_ONE = "bto";
@@ -67,6 +68,7 @@ public interface IFernflowerPreferences {
     defaults.put(NO_EXCEPTIONS_RETURN, "1");
     defaults.put(ENSURE_SYNCHRONIZED_MONITOR, "1");
     defaults.put(DECOMPILE_ENUM, "1");
+    defaults.put(DECOMPILE_RECORD, "0");
     defaults.put(REMOVE_GET_CLASS_NEW, "1");
     defaults.put(LITERALS_AS_IS, "0");
     defaults.put(BOOLEAN_TRUE_ONE, "1");
